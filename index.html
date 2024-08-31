@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Resume - Jordan Lee</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* Full-screen gradient background */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(135deg, #00b4db, #0083b0); /* Gradient colors */
+      color: #fff;
+      overflow-x: hidden; /* Prevent horizontal scroll */
+    }
+
+    /* Wrapper for content */
+    .wrapper {
+      width: 100vw; /* Full width */
+      height: 100vh; /* Full height */
+      background: #2c3e50;
+      padding: 20px;
+      overflow: auto;
+      animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+    }
+
+    /* Header section */
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      animation: fadeInUp 1s ease-out; /* Add fade-in-up animation */
+    }
+
+    .avatar {
+      width: 120px;
+      height: 120px;
+      background-image: url('https://img.icons8.com/?size=100&id=7819&format=png&color=000000'); /* Add your profile pic URL here */
+      background-size: cover;
+      background-position: center;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      margin: 0 auto 15px;
+      animation: zoomIn 1s ease-out; /* Add zoom-in animation */
+    }
+
+    .name {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+      animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+    }
+
+    .position {
+      font-size: 1.5em;
+      color: #f39c12;
+      animation: fadeIn 1.5s ease-in-out; /* Add fade-in animation */
+    }
+
+    /* Section styles */
+    section {
+      margin-bottom: 30px;
+      opacity: 0; /* Initial opacity for animation */
+      animation: fadeInUp 1.5s ease-out forwards; /* Add fade-in-up animation */
+    }
+
+    h2, h3 {
+      color: #f39c12; /* Update text color */
+      margin-top: 15px;
+      margin-bottom: 15px; /* Add margin after heading */
+      animation: fadeInUp 1s ease-out; /* Add fade-in-up animation */
+    }
+
+    h3 {
+      font-size: 1.5em;
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    /* Skills list */
+    .skills ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills li {
+      background: #ecf0f1;
+      color: #2c3e50;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      from {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Smooth scrolling effect */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      .avatar {
+        width: 100px;
+        height: 100px;
+      }
+
+      .name {
+        font-size: 2em;
+      }
+
+      .position {
+        font-size: 1.2em;
+      }
+
+      h2, h3 {
+        font-size: 1.5em;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .avatar {
+        width: 80px;
+        height: 80px;
+      }
+
+      .name {
+        font-size: 1.5em;
+      }
+
+      .position {
+        font-size: 1em;
+      }
+
+      h2, h3 {
+        font-size: 1.2em;
+      }
+    }
+
+    #link {
+      color: yellow;
+    }
+
+    #link a {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <header class="intro">
+      <div class="avatar"></div>
+      <h1 class="name">Jordan Lee</h1>
+      <p class="position">UX/UI Designer</p>
+    </header>
+    <section class="bio">
+      <h2>About Me</h2>
+      <p>I am an innovative UX/UI Designer with over 7 years of experience in creating user-centered designs for digital products. I have a keen eye for detail and a passion for creating intuitive and engaging user experiences.</p>
+    </section>
+    <section class="skills">
+      <h2>Skills</h2>
+      <ul>
+        <li>Sketch</li>
+        <li>Figma</li>
+        <li>Adobe XD</li>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>Prototyping</li>
+        <li>User Research</li>
+        <li>Wireframing</li>
+      </ul>
+    </section>
+    <section class="experience">
+      <h2>Experience</h2>
+      <div class="job">
+        <h3>Lead UX Designer</h3>
+        <p>Creative Agency, 2018 - Present</p>
+        <p>Leading a team of designers to develop user-friendly interfaces and conduct user research to improve product design. Overseeing the design process from conception to delivery.</p>
+      </div>
+      <div class="job">
+        <h3>UX/UI Designer</h3>
+        <p>Design Studio, 2015 - 2018</p>
+        <p>Designed and implemented web and mobile interfaces. Collaborated with clients to understand their needs and provided solutions that enhanced user experience.</p>
+      </div>
+    </section>
+    <section class="education">
+      <h2>Education</h2>
+      <p>Bachelor of Fine Arts in Graphic Design, University of Arts, 2014</p>
+    </section>
+    <section class="contact">
+      <h2>Contact</h2>
+      <p>Email: jordan.lee@example.com</p>
+      <p>Phone: +123 456 7890</p>
+      <p id="link">LinkedIn: <a href="https://linkedin.com/in/jordanlee" target="_blank">linkedin.com/in/jordanlee</a></p>
+    </section>
+  </div>
+</body>
+</html>
